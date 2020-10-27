@@ -1,0 +1,126 @@
+body{
+    background-color:rgb(24, 23, 23);
+}
+.line1, .line2{
+    width: 500px;
+    height: 10px;
+    top: 20%;
+    left: 50px;
+    position: absolute;
+    border-top: 2px dashed white ;
+    animation: l1 infinite 3s linear ;  
+}
+.line2{
+    top: 30%;
+    left: 50%;
+    animation: l2 infinite 3s linear;
+}
+.road{
+    width: 100%;
+    height: 50px;
+    top: 80%;
+    position: fixed;
+    border-top: 10px dashed white;
+    animation: road1 infinite 0.5s linear;
+ }
+  @keyframes road1{
+        0%{ 
+            transform: translateX(0%);
+        }
+       100%{
+            transform: translateX(-2%);
+        
+       }
+  
+
+}
+.pacman{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f2d648;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    animation: bounce 1s infinite;
+}
+.eye{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    top: 63%;
+    left: 44.6%;
+    animation: bounce 1s infinite;
+}
+.mouth{
+    width: 1.5px; 
+    height: 1.5px; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right:20px solid rgb(24, 23, 23) ; 
+    top: 66%;
+    left: 45.7%;
+    position: absolute;
+    animation: bounce 1s infinite;
+  }
+  .ball{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    animation: food infinite 0.5s linear;
+}
+
+   
+   @keyframes bounce{
+    0%, 20%, 40%, 60%, 80%, 100% { 
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+   }
+   @keyframes road1{
+    0%{ 
+        transform: translateX(0%);
+       
+    }
+   100%{
+        transform: translateX(-2%);
+       
+    
+}
+   }
+@keyframes food{
+    0%{ 
+        transform: translateX(0);
+        opacity:1;
+    }
+   100%{
+        transform: translateX(-50px);
+       opacity:0;
+   }
+}
+   @keyframes l1{
+    0%{ 
+        transform: translateX(400px);
+    }
+   100%{
+        transform: translateX(-700px);
+    
+   }
+}
+   @keyframes l2{
+    0%{ 
+        transform: translateX(500px);
+    }
+   100%{
+        transform: translateX(-800px);
+    
+   }
+}
